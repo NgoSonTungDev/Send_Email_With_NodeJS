@@ -15,7 +15,7 @@ app.post("/sendMail", async (req, res) => {
     service: "gmail",
     auth: {
       user: "tungdeveloper01@gmail.com",
-      pass: "tungdev3901",
+      pass: process.env.PASSMAIL,
     },
   };
   var transporter = await nodemailer.createTransport(option);
